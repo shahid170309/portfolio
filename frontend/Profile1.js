@@ -306,13 +306,14 @@ if (cardShine) {
     /* =========================================
     LOAD PROFILE FROM SPRING BOOT API
     ========================================= */
+    const API_BASE_URL = "https://portfolio-acxo.onrender.com";
+
 
     async function loadProfile() {
 
         try {
 
-            const response =
-                await fetch("http://localhost:8080/api/profile");
+            const response = await fetch(`${API_BASE_URL}/api/profile`);
 
             if (!response.ok) {
                 throw new Error("Failed to load profile");
@@ -339,7 +340,7 @@ if (cardShine) {
         try {
 
             const experienceResponse =
-                await fetch("http://localhost:8080/api/experience");
+                await fetch(`${API_BASE_URL}/api/experience`);
 
             if (!experienceResponse.ok) {
                 throw new Error("Failed to load experience");
@@ -441,7 +442,7 @@ if (cardShine) {
         try {
 
             const skillsResponse =
-                await fetch("http://localhost:8080/api/skills");
+                await fetch(`${API_BASE_URL}/api/skills`);
 
             if (!skillsResponse.ok) {
                 throw new Error("Failed to load skills");
@@ -610,7 +611,7 @@ if (cardShine) {
             try {
 
                 const architectureResponse =
-                    await fetch("http://localhost:8080/api/architecture");
+                    await fetch(`${API_BASE_URL}/api/architecture`);
 
                 if (!architectureResponse.ok) {
                     throw new Error("Failed to load architecture");
@@ -677,7 +678,7 @@ if (cardShine) {
         try {
 
             const projectsResponse =
-                await fetch("http://localhost:8080/api/projects");
+                await fetch(`${API_BASE_URL}/api/projects`);
 
             if (!projectsResponse.ok) {
                 throw new Error("Failed to load projects");
@@ -803,7 +804,7 @@ if (cardShine) {
     if (educationContainer) {
         try {
             const educationResponse =
-                await fetch("http://localhost:8080/api/education");
+                await fetch(`${API_BASE_URL}/api/education`);
 
             if (!educationResponse.ok) {
                 throw new Error("Failed to load education");
@@ -863,7 +864,7 @@ if (cardShine) {
     if (certificationsContainer) {
         try {
             const certificationsResponse =
-                await fetch("http://localhost:8080/api/certifications");
+                await fetch(`${API_BASE_URL}/api/certifications`);
 
             if (!certificationsResponse.ok) {
                 throw new Error("Failed to load certifications");
